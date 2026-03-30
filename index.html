@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shwe Yi Myint Aung</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+
+        body {
+            background-color: #ffeef2;
+            font-family: 'Padauk', sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            width: 100%;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff85a2, #ff4d6d);
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+            animation: fadeIn 2s;
+        }
+
+        /* Countdown Container Styles */
+        .countdown-container {
+            margin: 30px auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            width: 90%;
+            max-width: 600px;
+            z-index: 10;
+        }
+
+        .countdown-container h2 {
+            color: #ff4d6d;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            background: #ffeef2;
+            border: 2px solid #ffb3c6;
+            padding: 15px;
+            border-radius: 15px;
+            min-width: 70px;
+            box-shadow: 0 4px 10px rgba(255, 179, 198, 0.3);
+        }
+
+        .time-box span {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff4d6d;
+            display: block;
+        }
+
+        .time-box p {
+            margin: 5px 0 0 0;
+            color: #d62828;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .photo-container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+            z-index: 10;
+        }
+
+        .photo-frame {
+            border: 8px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 20px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.03) rotate(-2deg);
+        }
+
+        /* Message Box & Password Styles */
+        .message-box {
+            background: white;
+            margin: 20px auto 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            z-index: 10;
+            line-height: 1.8;
+            color: #555;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cute-btn {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.4);
+            font-family: inherit;
+            transition: transform 0.2s, background 0.2s;
+            margin-top: 10px;
+        }
+
+        .cute-btn:hover {
+            transform: scale(1.05);
+            background: #d62828;
+        }
+
+        #password-input {
+            padding: 12px;
+            border: 2px solid #ffb3c6;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 10px 0;
+            outline: none;
+            font-family: inherit;
+            width: 80%;
+            max-width: 200px;
+        }
+
+        #password-input:focus {
+            border-color: #ff4d6d;
+        }
+
+        .secret-message-content h3 {
+            color: #ff4d6d;
+            margin-top: 0;
+            font-size: 1.4rem;
+            animation: fadeIn 1s;
+        }
+
+        .secret-message-content p {
+            animation: fadeIn 2s;
+            font-size: 1.05rem;
+            color: #444;
+            text-align: center;
+        }
+
+        /* Floating Hearts Styles */
+        .heart {
+            position: fixed;
+            color: #ff4d6d;
+            font-size: 20px;
+            top: -20px;
+            user-select: none;
+            z-index: 1;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 480px) {
+            .header { font-size: 2rem; }
+            .time-box { min-width: 55px; padding: 10px; }
+            .time-box span { font-size: 1.5rem; }
+            .countdown { gap: 10px; }
+            .secret-message-content h3 { font-size: 1.2rem; }
+            .secret-message-content p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        🎉 Happy Birthday 🎉 <br>
+        <span style="font-size: 1.5rem; font-weight: normal;">Sai Hanmin</span>
+    </div>
+
+    <!-- Countdown Timer အပိုင်း -->
+    <div class="countdown-container">
+        <h2 id="countdown-title">မွေးနေ့ရောက်ဖို့ လိုသေးတဲ့အချိန်... ⏳</h2>
+        <div class="countdown" id="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>ရက်</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>နာရီ</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>မိနစ်</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>စက္ကန့်</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ဓာတ်ပုံထည့်ရန် အပိုင်း -->
+    <div class="photo-container">
+        <!-- ပုံလေးတွေရဲ့ Link ကို src ထဲမှာ ထည့်ပါ -->
+        <img src="https://photos.app.goo.gl/QgKXFmpvVf3AVeqZ6" alt="Birthday Photo" class="photo-frame">
+    </div>
+
+    <!-- ဆုတောင်းစာ (Password ဖြင့် ပိတ်ထားသော) အပိုင်း -->
+    <div class="message-box">
+        
+        <!-- အဆင့် ၁: မွေးနေ့ဆုတောင်း ခလုတ် -->
+        <div id="btn-section">
+            <button class="cute-btn" onclick="showPasswordPrompt()">💌 မွေးနေ့ဆုတောင်း ဖတ်ရန်</button>
+        </div>
+        
+        <!-- အဆင့် ၂: Password တောင်းမည့်နေရာ -->
+        <div id="password-section" style="display: none;">
+            <p style="color: #ff4d6d; font-weight: bold; font-size: 1.1rem;">စကားဝှက် ရိုက်ထည့်ပါဝူး 🙈</p>
+            <input type="password" id="password-input" placeholder="Password..."> <br>
+            <button class="cute-btn" onclick="checkPassword()">ဖွင့်မယ် 🔓</button>
+            <p id="error-msg" style="color: red; display: none; font-size: 0.9rem; margin-top: 10px; animation: fadeIn 0.5s;">
+                စကားဝှက်မှားနေပါတယ် ချစ်လေး  🥺
+            </p>
+        </div>
+        
+        <!-- အဆင့် ၃: Password မှန်မှ ပေါ်မည့် ဆုတောင်းစာ -->
+        <div id="secret-message" class="secret-message-content" style="display: none;">
+            <h3>Happy 22nd Birthday to the man I love most ❤️</h3>
+            <p>
+                Watching you grow, dream, and work hard makes me so proud of you. You're not just my boyfriend, you're my comfort, my happiness, and my safe place.
+                <br><br>
+                At 22, I hope you become even stronger, happier, and closer to all your goals.
+                <br><br>
+                No matter what happens, I’ll always be cheering for you, loving you, and standing by your side. I'm so lucky to love you and be loved by you.
+                <br><br>
+                Thank you for being my favorite person.
+                <br><br>
+                <b>Enjoy your special day, my handsome 💕</b>
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        // --- Password Logic ---
+        function showPasswordPrompt() {
+            document.getElementById('btn-section').style.display = 'none';
+            document.getElementById('password-section').style.display = 'block';
+        }
+
+        function checkPassword() {
+            const pwd = document.getElementById('password-input').value;
+            
+            if (pwd === "2356") {
+                document.getElementById('password-section').style.display = 'none';
+                document.getElementById('secret-message').style.display = 'block';
+                
+                for(let i=0; i<15; i++) {
+                    setTimeout(createHeart, i * 100);
+                }
+            } else {
+                document.getElementById('error-msg').style.display = 'block';
+                document.getElementById('password-input').value = ''; 
+            }
+        }
+
+        // --- Countdown Timer Logic ---
+        let currentYear = new Date().getFullYear();
+        let birthdayDate = new Date(currentYear, 4, 25, 0, 0, 0).getTime();
+
+        if (new Date().getTime() > birthdayDate) {
+            birthdayDate = new Date(currentYear + 1, 4, 25, 0, 0, 0).getTime();
+        }
+
+        const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = birthdayDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const formatTime = (time) => time < 10 ? `0${time}` : time;
+
+            document.getElementById("days").innerText = formatTime(days);
+            document.getElementById("hours").innerText = formatTime(hours);
+            document.getElementById("minutes").innerText = formatTime(minutes);
+            document.getElementById("seconds").innerText = formatTime(seconds);
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("countdown-title").innerHTML = "🎉 Happy 22nd Birthday my handsome! 🎂💖";
+                document.getElementById("countdown-title").style.fontSize = "2rem";
+            }
+        }, 1000);
+
+        // --- Floating Hearts Animation Logic ---
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            const hearts = ['❤️', '💖', '💕', '🌸']; 
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.5; 
+            heart.style.fontSize = (Math.random() * 15 + 10) + 'px'; 
+            
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
+
+
